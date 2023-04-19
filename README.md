@@ -35,7 +35,7 @@
 ### [Structure]
 - Spring Container FrameWork : Core
 - Spring MVC : Bean들이 도와준다
-- Spring Dao : Database & Business가 모두 들어 있다 / 여러 객체 & 의존성 관리
+- Spring DAO : Database & Business가 모두 들어 있다 / 여러 객체 & 의존성 관리
 
 - Controller
     - Frontend : Servlet controller
@@ -68,7 +68,7 @@
 3. init( ) { }
 > - container 설정(Web Application Context)
 >   - 설젇 File : spring-servlet.xml (Config 설정 필수!) 
->   - Bean 자동 생성(MVC 도와주는 세가지 Bean) / 2,3 -> Controller Return 처리
+>   - Bean 자동 생성(MVC 도와주는 세가지 Bean) / 2,3 -> Controller Return 처리 / Bean을 Annotation으로 생성하겠다.
 >       1. HandlerMapping(Bean생성) -> Controller 실행
 >           - URL : /hello
 >           - Controller : 내부 Scanning / 필수) @RequestMapping, @Controller, Return
@@ -78,3 +78,4 @@
 >       2. ViewResolver : JSP
 >       3. MessageConvertor : Ajax 통신
 
+4. Service
