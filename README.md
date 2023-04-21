@@ -79,3 +79,13 @@
 >       3. MessageConvertor : Ajax 통신
 
 4. Service
+
+---
+## ViewResolver
+ 1. ViewResolver는 HandlerMapping이 컨트롤러를 찾아주는 것 처럼, View 이름을 가지고  View 오브젝트를 찾아준다.
+
+ 2. ViewResolver 를 빈 등록하지 않으면 DispatcherServlet의 기본 ViewResolver 인 InternalResourceViewResolver가 사용된다. 
+
+ 3. 디폴트 사용에서는 View 로 이동하는 전체 경로를 다 적어 주어야 한다.
+
+ 4. prefix와 suffix를 지정하여 앞 뒤의 내용을 생략하여 매우 편리하게 View를 지정할 수 있다.     
