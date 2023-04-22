@@ -82,6 +82,7 @@
 
 ---
 ## ViewResolver
+
  1. ViewResolver는 HandlerMapping이 컨트롤러를 찾아주는 것 처럼, View 이름을 가지고  View 오브젝트를 찾아준다.
 
  2. ViewResolver 를 빈 등록하지 않으면 DispatcherServlet의 기본 ViewResolver 인 InternalResourceViewResolver가 사용된다. 
