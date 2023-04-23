@@ -63,7 +63,7 @@
 
 2. Tomcat
 > - 설정 -> Web.xml -> Dispatch Servlet
-> - /helloweb(Servlet -> DispatcherServlet
+> - /helloweb(Servlet -> DispatcherServlet)
 
 3. init( ) { }
 > - container 설정(Web Application Context)
