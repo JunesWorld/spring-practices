@@ -92,3 +92,24 @@
  3. 디폴트 사용에서는 View 로 이동하는 전체 경로를 다 적어 주어야 한다.
 
  4. prefix와 suffix를 지정하여 앞 뒤의 내용을 생략하여 매우 편리하게 View를 지정할 수 있다.     
+
+---
+## 정적 자원 접근 실패 
+   - html, css, js 등의 파일 접근에 실패한다.
+
+   - DispatcherServlet 이 모든 URL처리에 서블릿 매핑을 하였기 때문에 톰캣은 정적 자원에 대한 URL처리도
+      DispatcherServlet에게 넘기기 때문이다. ( 즉, DefaultServlet에 위임을 하지 못한다. )
+      
+   - Spring MVC 에서 DefaultServlet 위임 처리하기
+   
+   - HandlerMapping이 URL과 컨트롤러의 메소드(핸들러) 와의 매핑 정보를 가지고 있다.
+
+   - HandlerMapping에서 정적 자원에 대한 URL은 DefaultServlet으로 위임할 수 있도록 설정 해주어야 한다.
+
+   - spring-servlet.xml 파일에서 
+
+	<validator, conversionService, messageConverter를 자동으로 등록>
+		- <mvc:annotation-driven />
+	<서블릿 컨테이너의 디폴트 서블릿 위임 핸들러>
+		- <mvc:default-servlet-handler/>
+
