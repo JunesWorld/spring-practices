@@ -27,6 +27,8 @@
 - /WEB-INF/spring-servlet.xml 생성
     - 서블릿 애플리케이션 컨텍스트 설정 
     - Annotation(@Controller) 사용하기 위한 config 설정
+- /WEB-INF/applicationContext.xml
+	- Business 구현 : DAO
 
 ---
 
