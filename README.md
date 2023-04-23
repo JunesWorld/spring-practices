@@ -58,7 +58,7 @@
 
 1. 요청
 > - Servlet이 받는다
-> - 이 행위를 Tomcat이 관리(WAS -> Servlet/Enterprise Java Bean Container)
+> - 이 행위를 Tomcat이 관리(WAS -> Servlet/Enterprise Java Bean Container) : WAS에서 DispathServlet을 처리해준다. 
 > - Enterprise Java Bean Container : 기업용 Application 비지니스를 구현해 놓은 Java로 만든 객체들 / 객체 재사용이 어려움
 
 2. Tomcat
