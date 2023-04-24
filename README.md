@@ -83,6 +83,7 @@
 4. Service
 
 ---
+# [MySite]
 ## 정적 자원 접근 실패 
    - html, css, js 등의 파일 접근에 실패한다.
 
@@ -122,3 +123,15 @@
 ```
 - prefix & suffix = 접두사 & 접미사
 	- /WEB-INF/views/(view name).jsp 
+---
+##[Mysite03]
+> Root Application Cotext 
+> UserService(UserRepository userRepository -> DI(의존성 주입)) / UserRepository
+> UserController(UserService userService ->  DI(의존성 주입))
+ 
+- com.bitacademy.mysite.controller
+	- UserController(/user) : /join, /login, /update, /logout 
+- com.bitacademy.mysite.service
+ 	- UserService
+- com.bitacademy.mysite.repository
+- com.bitacademy.mysite.vo
