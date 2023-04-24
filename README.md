@@ -83,17 +83,6 @@
 4. Service
 
 ---
-## ViewResolver
-
- 1. ViewResolver는 HandlerMapping이 컨트롤러를 찾아주는 것 처럼, View 이름을 가지고  View 오브젝트를 찾아준다.
-
- 2. ViewResolver 를 빈 등록하지 않으면 DispatcherServlet의 기본 ViewResolver 인 InternalResourceViewResolver가 사용된다. 
-
- 3. 디폴트 사용에서는 View 로 이동하는 전체 경로를 다 적어 주어야 한다.
-
- 4. prefix와 suffix를 지정하여 앞 뒤의 내용을 생략하여 매우 편리하게 View를 지정할 수 있다.     
-
----
 ## 정적 자원 접근 실패 
    - html, css, js 등의 파일 접근에 실패한다.
 
@@ -112,4 +101,22 @@
 		- <mvc:annotation-driven />
 	<서블릿 컨테이너의 디폴트 서블릿 위임 핸들러>
 		- <mvc:default-servlet-handler/>
+---
+## ViewResolver(수동 Bean설정)
 
+ 1. ViewResolver는 HandlerMapping이 컨트롤러를 찾아주는 것 처럼, View 이름을 가지고  View 오브젝트를 찾아준다.
+
+ 2. ViewResolver 를 빈 등록하지 않으면 DispatcherServlet의 기본 ViewResolver 인 InternalResourceViewResolver가 사용된다. 
+
+ 3. 디폴트 사용에서는 View 로 이동하는 전체 경로를 다 적어 주어야 한다.
+
+ 4. prefix와 suffix를 지정하여 앞 뒤의 내용을 생략하여 매우 편리하게 View를 지정할 수 있다.     
+
+<!–- ViewResolver 설정 -->
+```
+<bean id=＂viewResolver＂ class=＂org.springframework.web.servlet.view.InternalResourceViewResolver＂>
+   <property name=＂viewClass" value="org.springframework.web.servlet.view.JstlView" />
+   <property name="prefix" value="/WEB-INF/views/" />
+   <property name="suffix" value=".jsp" />
+</bean>
+```
