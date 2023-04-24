@@ -124,7 +124,7 @@
 - prefix & suffix = 접두사 & 접미사
 	- /WEB-INF/views/(view name).jsp 
 ---
-##[Mysite03]
+## [Mysite03]
 > - Root Application Cotext 
 > - UserService(UserRepository userRepository -> DI(의존성 주입)) / UserRepository
 > - UserController(UserService userService ->  DI(의존성 주입))
