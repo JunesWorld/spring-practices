@@ -125,9 +125,9 @@
 	- /WEB-INF/views/(view name).jsp 
 ---
 ##[Mysite03]
-> Root Application Cotext 
-> UserService(UserRepository userRepository -> DI(의존성 주입)) / UserRepository
-> UserController(UserService userService ->  DI(의존성 주입))
+> - Root Application Cotext 
+> - UserService(UserRepository userRepository -> DI(의존성 주입)) / UserRepository
+> - UserController(UserService userService ->  DI(의존성 주입))
  
 - com.bitacademy.mysite.controller
 	- UserController(/user) : /join, /login, /update, /logout 
