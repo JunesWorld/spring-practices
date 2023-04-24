@@ -112,7 +112,7 @@
 
  4. prefix와 suffix를 지정하여 앞 뒤의 내용을 생략하여 매우 편리하게 View를 지정할 수 있다.     
 
-<!–- ViewResolver 설정 -->
+<!–- ViewResolver 설정 (spring-servlet.xml)-->
 ```
 <bean id=＂viewResolver＂ class=＂org.springframework.web.servlet.view.InternalResourceViewResolver＂>
    <property name=＂viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -120,3 +120,5 @@
    <property name="suffix" value=".jsp" />
 </bean>
 ```
+- prefix & suffix = 접두사 & 접미사
+	- /WEB-INF/views/(view name).jsp 
