@@ -150,6 +150,9 @@
 	- 모든 Controller의 Exception처리 -> GlobalExceptionHandler
 	- 500.jsp Error : Servlet, Filter, Listener Error!
 	- GlobalExceptionHandler(exception.jsp) Error : 내가 만든 코드(Controller/Service/Repository) Error!
-- DataSource
-	- DB -> DataSource -> Repository(DataSource dataSource) -> Service(Repository repository)
-	- Apache Common DBCP : 가장 유명한 오픈소스 DB Connection pool libarary
+	
+- DataSource(pom.xml 설정 -> [Apache Common DBCP])
+	- Bean설정(applicatinContext.xml -> DB정보 설정)
+		- DB -> DataSource -> Repository(DataSource dataSource) -> Service(Repository repository)
+		- UserRepository에서 Datasource 설정
+	
