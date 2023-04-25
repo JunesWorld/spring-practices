@@ -136,5 +136,7 @@
 - com.bitacademy.mysite.repository
 - com.bitacademy.mysite.vo
 
-- Exception 처리 (try~catch)
-	- 윗 단에서 처리한다.(Controller) 
+- AOP = Exception 처리 (try~catch)
+	- Repsitory에서 try~catch를 하지 않고 throws를 하면 윗단인 Service에서 try~catch해줘야한다(=throws는 안좋은 방법)
+	- 즉, 아랫단에서 Runtime Exception으로 Mapping 윗 단(Controller)에서 try~catch 처리한다.
+	- 결국, Controller에서 까지 throws를 하면 Servlet에서 처리해야한다.(Web.xml -> Common Error Page처리 후 500.jsp 페이지 만들어야 한다.)
