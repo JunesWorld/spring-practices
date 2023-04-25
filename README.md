@@ -135,3 +135,6 @@
  	- UserService
 - com.bitacademy.mysite.repository
 - com.bitacademy.mysite.vo
+
+- Exception 처리 (try~catch)
+	- 윗 단에서 처리한다.(Controller) 
