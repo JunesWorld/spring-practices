@@ -135,8 +135,18 @@
  	- UserService
 - com.bitacademy.mysite.repository
 - com.bitacademy.mysite.vo
+- com.bitacademy.mysite.exception
+	- UserRepositoryException : 생성 시 superclass(RuntimeException으로 변경할 것)
+		- Repository에서 RuntimeException으로 감싸서 윗단으로 올리는 것
+		- 위 Class 생성하면 Service, Controller에서 SQLException 처리 할 필요 X 
+	- ControllerExceptionHandler -> Spring-servlet.xml에서 설정해야 한다.
+		- @ControllerAdvice : 모든 Controller에 적용
 
 - AOP = Exception 처리 (try~catch)
-	- Repsitory에서 try~catch를 하지 않고 throws를 하면 윗단인 Service에서 try~catch해줘야한다(=throws는 안좋은 방법)
-	- 즉, 아랫단에서 Runtime Exception으로 Mapping 윗 단(Controller)에서 try~catch 처리한다.
-	- 결국, Controller에서 까지 throws를 하면 Servlet에서 처리해야한다.(Web.xml -> Common Error Page처리 후 500.jsp 페이지 만들어야 한다.)
+	- Repsitory에서 try/catch를 하지 않고 throws를 하면 윗단인 Service에서 try~catch해줘야한다(=throws는 안좋은 방법)
+	- 즉, 아랫단에서 Runtime Exception으로 Mapping 후 윗 단(Controller)에서 try~catch 처리한다.
+		- Repository에서 RuntimeException 
+	- 결국, Controller까지 throws를 하면 Servlet에서 처리해야한다.(Web.xml -> Common Error Page처리 후 500.jsp 페이지 만들어야 한다.)
+	- 모든 Controller의 Exception처리 -> GlobalExceptionHandler
+	- 500.jsp Error : Servlet, Filter, Listener Error!
+	- GlobalExceptionHandler(exception.jsp) Error : 내가 만든 코드(Controller/Service/Repository) Error!
