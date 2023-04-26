@@ -156,3 +156,33 @@
 		- DB -> DataSource -> Repository(DataSource dataSource) -> Service(Repository repository)
 		- UserRepository에서 Datasource 설정
 	
+### MyBatis(Library) = ORM(Object Relation Mapping) = JPA를 구현한 실체 => pom.xml에서 설정
+- MyBatis = Object (Relation X) <-> SQL Mapping(Parameter & Result) => Mapper(XML, Interface)
+- Session
+	- Bean 설정 (Datasource, SessionFactory, SessionTemplate) => application-Context.xml에서 설정(xml에서 DI하는 과정)
+	- Session Factory는 DataSource를 주입 받아야 하고 Mapper(XML)로 SQL, Param, Result 바인딩 
+	- session = sf.getSession() -> Session Template은 Session Factory 주입 받아야 한다.
+	1. 연결하기 = session.getConnection
+	2. Transaction 시작
+	3. Statement 준비
+	4. 파라미터 바인딩
+	5. Query 실행 / 처리
+	6. Result 처리
+	7. Transaction 종료
+	8. 연결종료 
+	- Repository는 SessionTemplate 주입 받아야 한다.
+- Tomcat
+	|- webapps
+		|- mysite03
+			|- WEB-INF
+				|- web.xml
+				|- libs
+				|- classes
+					|- mybatis
+						|- cofiguration.xml -> src/main/resources
+					|- com
+						|- bitacademy
+							|- mysite
+								|- controller
+									|- MainController.class
+	
