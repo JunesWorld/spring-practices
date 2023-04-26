@@ -171,7 +171,8 @@
 	7. Transaction 종료
 	8. 연결종료 
 	- Repository는 SessionTemplate 주입 받아야 한다.
-- Tomcat
+- 경로 
+Tomcat
 	|- webapps
 		|- mysite03
 			|- WEB-INF
