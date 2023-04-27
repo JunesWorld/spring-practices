@@ -34,6 +34,14 @@
 - 기본적으로 사용하고 있는 coommon-logging 말고 성능이 좋은 Logback 사용
 - pom.xml -> JCL 제외 & Logback 추가!
 - web.xml : Dispather Servlet 설정!
+- logback.xml 설정(package 이름 & level) 후 Tomcat 실행
+	- localhost:8080/logex/ex2 실행
+	- VScode에서 logex2.log 확인
+	- Level 순위 
+		1. Debug
+		2. Info
+		3. Warn
+		4. Error
 
 ---
 
