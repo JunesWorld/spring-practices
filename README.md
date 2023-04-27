@@ -30,6 +30,11 @@
 - /WEB-INF/applicationContext.xml
 	- Business 구현 : DAO, Service
 
+### logex
+- 기본적으로 사용하고 있는 coommon-logging 말고 성능이 좋은 Logback 사용
+- pom.xml -> JCL 제외 & Logback 추가!
+- web.xml : Dispather Servlet 설정!
+
 ---
 
 ## 개념
