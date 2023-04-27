@@ -162,16 +162,27 @@
 	- Bean 설정 (Datasource, SessionFactory, SessionTemplate) => application-Context.xml에서 설정(xml에서 DI하는 과정)
 	- Session Factory는 DataSource를 주입 받아야 하고 Mapper(XML)로 SQL, Param, Result 바인딩 
 	- session = sf.getSession() -> Session Template은 Session Factory 주입 받아야 한다.
-	1. 연결하기 = session.getConnection
-	2. Transaction 시작
-	3. Statement 준비
-	4. 파라미터 바인딩
-	5. Query 실행 / 처리
-	6. Result 처리
-	7. Transaction 종료
-	8. 연결종료 
+		```
+		1. 연결하기 = session.getConnection
+		2. Transaction 시작
+		3. Statement 준비
+		4. 파라미터 바인딩
+		5. Query 실행 / 처리
+		6. Result 처리
+		7. Transaction 종료
+		8. 연결종료 
+		```
 	- Repository는 SessionTemplate 주입 받아야 한다.
-- Tomcat
+	- application.xml에서 SqlSessionFactoryBean, SqlSessionTemplete 설정
+
+
+- src/main/resources/mybatis/
+	- mappers/user.xml -> UserRepository에 있는 SQL문 옮겨주고 삭제
+		- id = method명 / <!CDATA[ "SQL Query"]]>
+	- configuration.xml -> user.xml에서 너무 길어지기 때문에 alias설정(parametertype - 소문자로 쓰는게 관례)
+	
+- 구조도
+	Tomcat
 	|- webapps
 		|- mysite03
 			|- WEB-INF
@@ -185,4 +196,4 @@
 							|- mysite
 								|- controller
 									|- MainController.class
-	
+- pom.xml -> spring jdbc 설정
