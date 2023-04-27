@@ -210,3 +210,11 @@
 								|- controller
 									|- MainController.class
 - pom.xml -> spring jdbc 설정
+
+### Logger
+- concept
+	- 원래 Exception을 sys.out으로 처리한 것을 logback 사용
+- pom.xml -> jcloverslf4j & logback 설정
+- src/main/resources/logback.xml -> appender : file과 연결
+- ControllerExceptionHandler 수정
+- Test : user.xml에서 Query문 일부로 Error 내고 테스트 진행
