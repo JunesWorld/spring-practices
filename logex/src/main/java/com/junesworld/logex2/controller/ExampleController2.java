@@ -22,7 +22,7 @@ public class ExampleController2 {
 		/**
 		 *  이 예제에서는 logback.xml 에서,
 		 *  
-		 *  1. fileAppender2 와 "com.douzone.logexample2" logger 를 살펴 보아야 합니다.
+		 *  1. fileAppender2 와 "com.junesworld.logex2" logger 를 살펴 보아야 합니다.
 		 *  
 		 *  2. fileAppender2 에서는 /logex/logex2.log 로그파일 지정과
 		 *  
