@@ -42,7 +42,19 @@
 		2. Info
 		3. Warn
 		4. Error
-
+### Interceptor
+- helloweb
+- [Package] com.junesworld.helloweb.Interceptor
+	- [Class] MyInterceptor01(추상 method를 만들고 override 하는 방법)
+		- [Add Interface] HandlerInterceptor
+		- return을 true로 해주어야 Interceptor가 응답하고 다음 controller로 넘어간다.
+	- [Class] MyInterceptor02(부모에서 만들고 필요한 것만 overriding해서 사용) -> 1번 기본 구현 다 되어있다.
+		- [Superclass] HandlerInterceptorAdaptor
+- spring-servelt.xml 설정 -> <mvc:interceptor>
+- UserController
+	- /user/login 오는 것을 LoginInterceptor를 만들고 return false;
+	- Controller까지 가지 않아도 된다.
+	- logout도 마찬가지
 ---
 
 ## 개념
@@ -220,4 +232,14 @@
 - ControllerExceptionHandler 수정
 - Test : user.xml에서 Query문 일부로 Error 내고 테스트 진행
 
-
+### Interceptor
+- mysite03
+- [Package] com.junesworld.mysite.security
+	- [Class] LoginInterceptor
+		- [Add Interface] HandlerInterceptor
+		- return false;
+- spring-servelt.xml 설정 -> <mvc:interceptor>
+- UserController
+	- /user/login 오는 것을 LoginInterceptor를 만들고 return false;
+	- Controller까지 가지 않아도 된다.
+	- logout도 마찬가지
