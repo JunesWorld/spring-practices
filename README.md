@@ -250,3 +250,10 @@
 	- @Auth
 		- com.bitacademy.mysite.security -> [new -> Annotation] Auth
 		- @Retension : Runtime / @Target : Method
+	- @AuthUser -> update(회원정보수정) 
+		- @Retension : Runtime / @Target : Parameter
+		- com.bitacademy.mysite.security
+		- spring-servlet.xml -> Argument-resolver 설정 / exclude!
+		- AuthUserHandlerMethodArgumentResolver
+		- [Add interface] HandlerMethodArgumentResolver
+	- AuthInterceptor에서 1번 작업해줘야 spring-servlet.xml(exclude) Handler 작동!
