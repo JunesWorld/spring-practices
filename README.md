@@ -234,7 +234,7 @@
 
 ### Interceptor
 - mysite03
-- [Package] com.junesworld.mysite.security
+- [Package] com.bitacademy.mysite.security
 	- [Class] LoginInterceptor
 		- [Add Interface] HandlerInterceptor
 		- return false;
@@ -243,3 +243,10 @@
 	- /user/login 오는 것을 LoginInterceptor를 만들고 return false;
 	- Controller까지 가지 않아도 된다.
 	- logout도 마찬가지
+- AuthInterceptor
+	- Handler가 실행이 되려면 Session(AuthInterceptor)에 authUser객체가 있는지 확인해보아야한다.
+	- 인증이 필요한지 확인! (UserController -> @Auth)
+	- 없으면 Login / 있으면 통과
+	- @Auth
+		- com.bitacademy.mysite.security -> [new -> Annotation] Auth
+		- @Retension : Runtime / @Target : Method
