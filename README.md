@@ -115,6 +115,7 @@
 		- <mvc:annotation-driven />
 	<서블릿 컨테이너의 디폴트 서블릿 위임 핸들러>
 		- <mvc:default-servlet-handler/>
+
 ---
 ## ViewResolver(수동 Bean설정)
 
@@ -218,3 +219,9 @@
 - src/main/resources/logback.xml -> appender : file과 연결
 - ControllerExceptionHandler 수정
 - Test : user.xml에서 Query문 일부로 Error 내고 테스트 진행
+
+### 접근 제어
+- /mysite03/...(url) -> url 제어해야함
+- filters -> DispatcherServlet -> Interceptors -> Spring Container(Application(Controller1,2,3))
+- Spring Security(Container)는 filters를 사용하지만 사실상 Spring Container안에 있다.
+- Interceptor = Security
