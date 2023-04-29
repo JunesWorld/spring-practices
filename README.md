@@ -259,15 +259,18 @@
 	- AuthInterceptor에서 1번 작업해줘야 spring-servlet.xml(exclude) Handler 작동!
 - @Valid
 ```
-public String join(@Valid UserVo userVo, BindingResult result) {
+public String join(@Valid UserVo userVo, BindingResult result, Model model) {
 	if(result.hasError()) {
-		List<ObjectError> errors = result.getAllErrors();
-		for(ObjectError error : errors) {
-			System.out.println(error);
-		}
+		// List<ObjectError> errors = result.getAllErrors();
+		// for(ObjectError error : errors) {
+		// 	System.out.println(error);
+		// }
+		
+		model.addAllAttributes(result.getModel());
 		return "user/join";
 	}
 	userService.join(userVo);
-	return "redirect:/user/joinsuccess";
+	return "redirect:/user/joinsuccess"; ```
 
 	- UserVo validation검사 후 result에 담아준다.
+	
