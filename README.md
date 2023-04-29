@@ -257,3 +257,17 @@
 		- AuthUserHandlerMethodArgumentResolver
 		- [Add interface] HandlerMethodArgumentResolver
 	- AuthInterceptor에서 1번 작업해줘야 spring-servlet.xml(exclude) Handler 작동!
+- @Valid
+```
+public String join(@Valid UserVo userVo, BindingResult result) {
+	if(result.hasError()) {
+		List<ObjectError> errors = result.getAllErrors();
+		for(ObjectError error : errors) {
+			System.out.println(error);
+		}
+		return "user/join";
+	}
+	userService.join(userVo);
+	return "redirect:/user/joinsuccess";
+
+	- UserVo validation검사 후 result에 담아준다.
