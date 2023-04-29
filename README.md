@@ -273,4 +273,4 @@ public String join(@Valid UserVo userVo, BindingResult result, Model model) {
 	return "redirect:/user/joinsuccess"; ```
 
 	- UserVo validation검사 후 result에 담아준다.
-	
+	- join.jsp(Default Message) -> Binding : parameter객체에 form data를 bind 시킨다. 
