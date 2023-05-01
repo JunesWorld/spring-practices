@@ -275,3 +275,4 @@ public String join(@Valid UserVo userVo, BindingResult result, Model model) {
 	- UserVo validation검사 후 result에 담아준다.
 	- join.jsp(Default Message) -> Binding : parameter객체에 form data를 bind 시킨다. 
 	- src/main/resources/messages -> messages_ko.properties
+- spring-servlet -> Message Source 설정
