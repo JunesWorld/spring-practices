@@ -273,7 +273,8 @@ public String join(@Valid UserVo userVo, BindingResult result, Model model) {
 	return "redirect:/user/joinsuccess"; ```
 
 	- UserVo validation검사 후 result에 담아준다.
-	- join.jsp(Default Message) -> Binding : parameter객체에 form data를 bind 시킨다. 
+	- join.jsp(Default Message) -> Binding : parameter객체에 form data를 bind 시킨다. / Form Tag 사용
 	- src/main/resources/messages -> messages_ko.properties(앞글자는 대문자로 해주는게 좋다) : 오류메시지 메모장에 적고 복붙!
 	- spring-servlet -> Message Source 설정(messages_ko.properties 내용을 받는다)
 	- join.jsp에서 코드로 에러 메세지 출력할 수 있게 변경한다 -> <spring:message code="${코드내용}"/>
+```
