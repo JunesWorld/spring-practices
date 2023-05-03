@@ -55,6 +55,11 @@
 	- /user/login 오는 것을 LoginInterceptor를 만들고 return false;
 	- Controller까지 가지 않아도 된다.
 	- logout도 마찬가지
+	
+### FileUpload
+- multipart -> Spring에 있는 Multipart Resolver(Common fileupload(Library))가 처리 -> MultipartFile에 담아서 Controller에 넘겨주어 Handler 넣어 처리
+	- name=이성준&email=asdfa@gmail.com&password=1234&file=asdfasf...가 아니고 part별로 분리하여(name/email/file) 분리하여 표현  
+	- name, email은 encoding / file은 encoding X
 ---
 
 ## 개념
