@@ -61,6 +61,7 @@
 	- name=이성준&email=asdfa@gmail.com&password=1234&file=asdfasf...가 아니고 part별로 분리하여(name/email/file) 분리하여 표현  
 	- name, email은 encoding / file은 encoding X
 - pom.xml & spring-servlet.xml 설정
+- 유저들이 파일을 업로드 할 때 똑같은 이름으로 할 경우 덮어쓰기 때문에 Server를 통과하고 저장할 때 파일 이름을 유일한 내용으로 변경해서 저장해야한다. 다만 확장자는 유지해야한다.
 ---
 
 ## 개념
