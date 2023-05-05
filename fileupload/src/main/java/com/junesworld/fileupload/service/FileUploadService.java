@@ -14,6 +14,9 @@ public class FileUploadService {
 		}
 		
 		String originalFilename = multipartFile.getOriginalFilename();
+		
+		String extName = originalFilename.substring(originalFilename.lastIndexOf('.')+1);
+		
 		Long fileSize = multipartFile.getSize();
 		
 		System.out.println("###### + originalFilename");
