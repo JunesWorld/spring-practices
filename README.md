@@ -62,6 +62,7 @@
 	- name, email은 encoding / file은 encoding X
 - pom.xml & spring-servlet.xml 설정
 - 유저들이 파일을 업로드 할 때 똑같은 이름으로 할 경우 덮어쓰기 때문에 Server를 통과하고 저장할 때 파일 이름을 유일한 내용으로 변경(초 단위로 변경)해서 저장해야한다. 다만 확장자는 유지해야한다.
+- Controller & Service 
 ---
 
 ## 개념
