@@ -293,3 +293,4 @@ public String join(@Valid UserVo userVo, BindingResult result, Model model) {
 - webapp/assets/gallery-examples & images & jquery
 - gallery.css 수업자료에 있는 것으로 수정
 - DB 추가 (11/22 2번째 50분)
+- pop-up layer -> 자바스크립트 
