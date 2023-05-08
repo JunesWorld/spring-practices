@@ -288,9 +288,10 @@ public String join(@Valid UserVo userVo, BindingResult result, Model model) {
 	- join.jsp에서 코드로 에러 메세지 출력할 수 있게 변경한다 -> <spring:message code="${코드내용}"/>
 ```
 
-### mysite03-gallery(수업자료)
+### mysite03-gallery(수업자료) 
 - webapp/assets/css/(css파일 옮기기)
 - webapp/assets/gallery-examples & images & jquery
 - gallery.css 수업자료에 있는 것으로 수정
 - DB 추가 (11/22 2번째 50분)
-- pop-up layer -> 자바스크립트 
+- pop-up layer -> 자바스크립트 (11/23)
+
